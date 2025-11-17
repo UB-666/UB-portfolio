@@ -147,9 +147,6 @@ UB-portfolio/
 - Fast page loads with Next.js
 - SEO optimized
 
-## 🔒 Security
-
-See [SECURITY.md](SECURITY.md) for security policy and vulnerability reporting.
 
 ## 📄 License
 
