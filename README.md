@@ -1,172 +1,297 @@
-# Upjeet Baswan - Portfolio Website
+# Upjeet Baswan - Full-Stack Developer Portfolio
 
-A modern, full-stack developer portfolio featuring smooth animations, theme switching, and interactive components. Built with Next.js 16 and React 19.
+[![Portfolio Screenshot](https://img.shields.io/badge/Portfolio-Live-00f5ff?style=for-the-badge&logo=next.js&logoColor=white)](https://ub-portfolio-one.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-UB--666-black?style=for-the-badge&logo=github&logoColor=white)](https://github.com/UB-666)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
 
-🔗 **Live Demo**: [Click Me](https://ub-portfolio-one.vercel.app/)
+A modern, responsive portfolio website built with Next.js 16, React 19, and Tailwind CSS 4. Features glassmorphism design, dark/light themes, interactive animations, and a fully functional contact form with hCaptcha protection.
 
-## 🚀 Features
+🔗 **Live Demo**: [https://ub-portfolio-one.vercel.app/](https://ub-portfolio-one.vercel.app/)
 
-- ⚡ Built with Next.js 16 (Turbopack) and React 19
-- 🎨 Modern glassmorphism design
-- 🌓 Dark/Light theme with smooth liquid morph transitions
-- 🎭 Beautiful animations and interactive elements
-- 📱 Fully responsive design
-- 🔒 Secure with environment variables
-- 🤖 hCaptcha bot protection on contact form
-- 🎵 Music player integration
-- ♿ Accessible and SEO optimized
+## ✨ Features
+
+### 🎨 **Design & UX**
+- **Glassmorphism Design** - Modern frosted glass effects with beautiful gradients
+- **Dark/Light Theme Toggle** - Smooth theme switching with liquid morph animations
+- **Dynamic Island Navigation** - Apple-inspired navigation bar
+- **Responsive Design** - Optimized for desktop, tablet, and mobile
+- **Smooth Animations** - Typing effects, floating elements, and parallax scrolling
+
+### 🚀 **Technical Features**
+- **Music Player** - Interactive vinyl record player with equalizer animation
+- **hCaptcha Integration** - Secure contact form with bot protection
+- **Interactive Timeline** - Creative experience and education timeline
+- **Skills Showcase** - Animated skill proficiency bars
+- **Project Cards** - Hover effects and detailed project information
+- **Contact Form** - Functional form with validation and security
+
+### ⚡ **Performance**
+- **Next.js 16** - Latest React framework with App Router
+- **React 19** - Latest React version with optimizations
+- **TypeScript** - Type-safe development
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **Optimized Images** - AVIF/WebP formats for fast loading
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 16 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI**: Custom glassmorphism components
-- **Security**: hCaptcha integration
-- **Deployment**: Optimized for Vercel
+### Frontend
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS 4
+- **UI Components**: Custom components with glassmorphism
+- **Icons**: SVG icons
+- **Animations**: CSS animations & transitions
+- **Font**: Inter (Google Fonts)
 
-## 📦 Installation
+### Backend & Services
+- **Contact Form**: Web3Forms API
+- **Security**: hCaptcha bot protection
+- **Deployment**: Vercel (optimized)
+- **Image Optimization**: Next.js Image component
 
-1. **Clone the repository**:
-```bash
-git clone https://github.com/UB-666/UB-portfolio.git
-cd UB-portfolio
-```
+### Development Tools
+- **Package Manager**: pnpm
+- **Linting**: ESLint 9 with Next.js config
+- **Code Quality**: TypeScript strict mode
+- **Config**: PostCSS, Tailwind CSS 4
 
-2. **Install dependencies**:
-```bash
-pnpm install
-# or
-npm install
-# or
-yarn install
-```
+## 🚀 Quick Start
 
-3. **Set up environment variables**:
-```bash
-cp .env.local.example .env.local
-```
+### Prerequisites
+- Node.js 20+ 
+- pnpm (recommended) or npm/yarn
 
-4. **Edit `.env.local` and add your keys**:
-```env
-NEXT_PUBLIC_HCAPTCHA_SITE_KEY=your_site_key_here
-HCAPTCHA_SECRET_KEY=your_secret_key_here
-```
+### Installation
 
-5. **Run development server**:
-```bash
-pnpm dev
-# or
-npm run dev
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/UB-666/UB-portfolio.git
+   cd UB-portfolio
+   ```
 
-6. **Open [http://localhost:3000](http://localhost:3000)** in your browser
+2. **Install dependencies**
+   ```bash
+   pnpm install
+   # or
+   npm install
+   ```
 
-## 🔐 Environment Variables
+3. **Set up environment variables**
+   ```bash
+   cp .env.local.example .env.local
+   ```
+   
+   Add your environment variables to `.env.local`:
+   ```env
+   # Contact Form (Web3Forms)
+   NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your_access_key_here
+   
+   # hCaptcha Keys
+   NEXT_PUBLIC_HCAPTCHA_SITE_KEY=your_hcaptcha_site_key_here
+   HCAPTCHA_SECRET_KEY=your_hcaptcha_secret_key_here
+   ```
 
-Get your hCaptcha keys:
-1. Sign up at [hCaptcha](https://www.hcaptcha.com/)
-2. Create a new site
-3. Copy your Site Key and Secret Key
-4. Add them to `.env.local`
+4. **Run the development server**
+   ```bash
+   pnpm dev
+   # or
+   npm run dev
+   ```
 
-Required variables:
-- `NEXT_PUBLIC_HCAPTCHA_SITE_KEY`: Your hCaptcha site key (public)
-- `HCAPTCHA_SECRET_KEY`: Your hCaptcha secret key (private)
-
-## 🏗️ Build for Production
-
-```bash
-pnpm build
-# or
-npm run build
-```
-
-Start production server:
-```bash
-pnpm start
-# or
-npm start
-```
-
-## 🌐 Deployment
-
-### Deploy to Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Import repository to [Vercel](https://vercel.com)
-3. Add environment variables in Vercel dashboard:
-   - `NEXT_PUBLIC_HCAPTCHA_SITE_KEY`
-   - `HCAPTCHA_SECRET_KEY`
-4. Deploy!
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/UB-666/UB-portfolio)
-
-### Other Platforms
-
-Set the same environment variables in your platform's dashboard (Netlify, Railway, etc.)
+5. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
 ## 📁 Project Structure
 
 ```
 UB-portfolio/
-├── app/
-│   ├── globals.css          # Global styles and animations
-│   ├── layout.tsx           # Root layout with metadata
-│   └── page.tsx             # Main portfolio page
-├── public/
-│   ├── music-cover.png      # Music player cover
-│   ├── Profile.png          # Profile image
-│   ├── Remontada.mp3        # Background music
-│   └── ...                  # Other assets
-├── .env.local.example       # Environment variables template
-├── .gitignore              # Git ignore rules
-├── next.config.ts          # Next.js configuration
-├── package.json            # Dependencies
-├── SECURITY.md             # Security policy
-└── README.md               # This file
+├── app/                    # Next.js App Router
+│   ├── globals.css        # Global styles & animations
+│   ├── icon.svg           # App icon
+│   ├── layout.tsx         # Root layout component
+│   └── page.tsx           # Home page (main portfolio)
+├── public/                # Static assets
+│   ├── Profile.png        # Profile photo
+│   ├── music-cover.png    # Music player cover
+│   ├── Remontada.mp3      # Background music
+│   ├── file.svg           # File icon
+│   ├── globe.svg          # Globe icon
+│   ├── next.svg           # Next.js logo
+│   └── window.svg         # Window icon
+├── .env.local.example     # Environment variables template
+├── .gitignore            # Git ignore file
+├── README.md             # This file
+├── README-example.md     # Example README template
+├── acli.exe              # CLI tool
+├── eslint.config.mjs     # ESLint configuration
+├── next.config.ts        # Next.js configuration
+├── package.json          # Dependencies & scripts
+├── pnpm-lock.yaml       # pnpm lock file
+├── postcss.config.mjs    # PostCSS configuration
+└── tsconfig.json         # TypeScript configuration
 ```
 
-## ✨ Key Features
+## 🎨 Customization
 
-### Theme Switching
-- Smooth liquid morph transition effect
-- Persistent theme preference (localStorage)
-- Optimized for both dark and light modes
+### Personal Information
+Edit `app/page.tsx` to update:
+- Name and title
+- Contact information
+- Social media links
+- Project details
+- Skills and experience
+- Work history and education
 
-### Interactive Components
-- Animated navigation with smooth scrolling
-- Timeline for experience and education
-- Skills showcase with hover effects
-- Project cards with glassmorphism design
-- Contact form with validation
+### Styling
+- **Colors**: Modify CSS variables in `app/globals.css`
+- **Animations**: Update keyframes and animation classes
+- **Theme**: Adjust dark/light theme styles in globals.css
 
-### Performance
-- Optimized images (AVIF/WebP)
-- Gzip compression enabled
-- Fast page loads with Next.js
-- SEO optimized
+### Content Sections
+The portfolio includes these main sections:
+1. **Hero** - Introduction with typing animation and CTA buttons
+2. **About** - Personal background and key traits
+3. **Experience** - Timeline of work experience and education
+4. **Skills** - Technical skills with proficiency levels
+5. **Projects** - Featured project showcase with details
+6. **Contact** - Contact form with hCaptcha and contact information
 
+### Metadata & SEO
+Edit `app/layout.tsx` to update:
+- Page title and description
+- Keywords for SEO
+- Open Graph metadata
+- Author information
 
-## 📄 License
+## 🚀 Deployment
 
-MIT License - feel free to use this project for your own portfolio!
+### Vercel (Recommended)
+1. Push your code to GitHub:
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/YOUR-USERNAME/portfolio.git
+   git push -u origin main
+   ```
+2. Go to [Vercel](https://vercel.com) and sign in with GitHub
+3. Click "New Project" and import your repository
+4. Add environment variables in Vercel dashboard:
+   - `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`
+   - `NEXT_PUBLIC_HCAPTCHA_SITE_KEY`
+   - `HCAPTCHA_SECRET_KEY`
+5. Click "Deploy" and wait for deployment to complete
 
-## 👨‍💻 Author
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/UB-666/UB-portfolio)
 
-**Upjeet Baswan**
-- Full-Stack Developer
-- Available for work in Canada
-- GitHub: [@UB-666](https://github.com/UB-666)
+### Other Platforms
+```bash
+# Build for production
+pnpm build
+
+# Start production server
+pnpm start
+```
+
+### Environment Variables for Production
+Required environment variables:
+- `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` - Your Web3Forms access key
+- `NEXT_PUBLIC_HCAPTCHA_SITE_KEY` - Your hCaptcha site key (public)
+- `HCAPTCHA_SECRET_KEY` - Your hCaptcha secret key (private, server-side only)
+
+## 🔧 Configuration
+
+### Web3Forms Setup
+1. Sign up at [Web3Forms](https://web3forms.com)
+2. Create a new form or use your existing access key
+3. Get your access key from the dashboard
+4. Add it to `.env.local` file:
+   ```env
+   NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your_access_key
+   ```
+
+### hCaptcha Setup
+1. Create account at [hCaptcha](https://www.hcaptcha.com/)
+2. Register your site:
+   - Add your domain (or localhost for development)
+   - Get your Site Key and Secret Key
+3. Add keys to `.env.local` file:
+   ```env
+   NEXT_PUBLIC_HCAPTCHA_SITE_KEY=your_site_key
+   HCAPTCHA_SECRET_KEY=your_secret_key
+   ```
+
+### Next.js Configuration
+The `next.config.ts` includes:
+- **React Strict Mode**: Enabled for development best practices
+- **Image Optimization**: AVIF and WebP formats
+- **Compression**: Gzip compression enabled
+- **Security**: Powered-by header removed
+
+## 📱 Features Breakdown
+
+### Theme System
+- **Dark Theme**: Default dark mode with glassmorphism effects
+- **Light Theme**: Clean light mode with adjusted colors
+- **Smooth Transitions**: Liquid morph effect between themes
+- **Persistent Choice**: Theme preference saved in localStorage
+- **System Integration**: Respects user's system preferences
+
+### Navigation
+- **Dynamic Island**: Modern navigation bar design inspired by Apple
+- **Smooth Scrolling**: Animated section transitions
+- **Mobile Responsive**: Optimized hamburger menu for mobile devices
+- **Active Section**: Visual indicator showing current section
+- **Sticky Header**: Navigation stays accessible while scrolling
+
+### Animations
+- **Loading Screen**: Professional loading animation on page load
+- **Typing Effect**: Animated name typing on hero section
+- **Floating Elements**: Parallax and floating animations throughout
+- **Hover Effects**: Interactive hover states on cards and buttons
+- **Music Player**: Spinning vinyl record with animated equalizer bars
+- **Timeline**: Animated experience and education timeline
+
+### Contact Form
+- **Validation**: Client-side form validation
+- **Security**: hCaptcha bot protection
+- **Feedback**: Success/error messages
+- **Responsive**: Mobile-optimized form layout
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## ⭐ Show Your Support
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Give a ⭐️ if you like this project!
+## 📄 License
+
+This project is licensed under the MIT License - feel free to use this project for your own portfolio!
+
+## 📞 Contact
+
+**Upjeet Baswan**
+- **Email**: upjeet1609@gmail.com
+- **Phone**: +1 (289) 623-0071
+- **Location**: Ontario, Canada
+- **GitHub**: [@UB-666](https://github.com/UB-666)
+- **Portfolio**: [https://ub-portfolio-one.vercel.app/](https://ub-portfolio-one.vercel.app/)
+
+## 🙏 Acknowledgments
+
+- **Next.js Team** - For the amazing React framework
+- **Vercel** - For the excellent hosting platform
+- **Tailwind CSS** - For the utility-first CSS framework
+- **Web3Forms** - For the contact form service
+- **hCaptcha** - For the security service
+- **React Team** - For React 19 and continuous improvements
 
 ---
 
-Built with ❤️ by Upjeet Baswan
+⭐ **Star this repository if it helped you build your portfolio!**
+
+🚀 **Built with passion by Upjeet Baswan**
