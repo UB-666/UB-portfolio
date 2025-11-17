@@ -120,9 +120,21 @@ export default function Home() {
       setIsDarkMode(newTheme);
       localStorage.setItem('theme', newTheme ? 'dark' : 'light');
       document.documentElement.classList.toggle('light-theme', !newTheme);
-    }, 320);
+      
+      const stars = document.querySelectorAll('.star');
+      stars.forEach((star) => {
+        (star as HTMLElement).style.opacity = '0';
+        (star as HTMLElement).style.transition = 'opacity 0.5s ease-in-out';
+      });
+      
+      setTimeout(() => {
+        stars.forEach((star) => {
+          (star as HTMLElement).style.opacity = '';
+        });
+      }, 50);
+    }, 450);
     
-    setTimeout(() => setIsThemeTransitioning(false), 800);
+    setTimeout(() => setIsThemeTransitioning(false), 1000);
   };
 
   const smoothScrollToSection = (sectionId: string) => {
@@ -359,19 +371,19 @@ export default function Home() {
         {/* Floating Music Player - Always Fixed Bottom Right */}
         {showMusicPlayer && !loading && (
         <div className="fixed bottom-4 sm:bottom-8 right-4 sm:right-8 z-[150] max-w-[calc(100vw-2rem)] sm:max-w-none">
-          <div className="glass-strong rounded-2xl p-3 sm:p-4 border-2 border-cyan-400/30 shadow-2xl shadow-cyan-500/20 backdrop-blur-xl w-[280px] sm:w-[320px]">
+          <div className="glass-strong rounded-xl p-4 sm:p-5 border-2 border-cyan-400/30 shadow-2xl shadow-cyan-500/20 backdrop-blur-xl w-auto">
             {/* Header */}
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">
                 <div className={`w-2 h-2 rounded-full ${isPlaying ? 'bg-green-500 animate-pulse' : 'bg-gray-500'}`}></div>
-                <span className="text-xs font-semibold text-cyan-400">My Anthem</span>
+                <span className="text-xs font-semibold text-cyan-400">Now Playing</span>
               </div>
               <button
                 onClick={() => setShowMusicPlayer(false)}
                 className="w-6 h-6 rounded-full hover:bg-red-500/20 flex items-center justify-center transition-all"
                 aria-label="Close player"
               >
-                <span className="text-xs">✕</span>
+                <span className="text-sm">✕</span>
               </button>
             </div>
 
@@ -390,9 +402,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex-1">
+              <div className="flex-1 min-w-0">
                 <p className="text-sm font-bold text-white truncate">Remontada</p>
-                <p className="text-xs text-gray-400">feat.Blanco, Kidwild</p>
+                <p className="text-xs text-gray-400 truncate">feat.Blanco, Kidwild</p>
               </div>
             </div>
 
@@ -401,7 +413,7 @@ export default function Home() {
               {/* Play/Pause Button */}
               <button
                 onClick={togglePlay}
-                className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center hover:scale-110 transition-transform shadow-lg group relative overflow-hidden"
+                className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center hover:scale-110 transition-transform shadow-lg group relative overflow-hidden flex-shrink-0"
                 aria-label={isPlaying ? 'Pause' : 'Play'}
               >
                 <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -412,7 +424,7 @@ export default function Home() {
                   </div>
                 ) : (
                   <div className="relative z-10 ml-1">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
                       <path d="M3 2L13 8L3 14V2Z" fill="white"/>
                     </svg>
                   </div>
@@ -420,8 +432,8 @@ export default function Home() {
               </button>
 
               {/* Volume Control */}
-              <div className="flex-1 flex items-center gap-2">
-                <div className="text-sm text-gray-300">
+              <div className="flex items-center gap-2 flex-1">
+                <div className="text-sm text-gray-300 flex-shrink-0">
                   {volume === 0 ? (
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
                       <path d="M8 3L4 6H1v4h3l4 3V3z"/>
@@ -447,13 +459,13 @@ export default function Home() {
                   step="0.1"
                   value={volume}
                   onChange={handleVolumeChange}
-                  className="flex-1 h-1 bg-gray-700 rounded-full appearance-none cursor-pointer slider"
+                  className="w-24 h-1 bg-gray-700 rounded-full appearance-none cursor-pointer slider"
                 />
               </div>
             </div>
 
             {isPlaying && (
-              <div className="flex items-end justify-center gap-1 h-8">
+              <div className="flex items-end justify-center gap-1 h-10">
                 {[...Array(8)].map((_, i) => (
                   <div
                     key={i}
