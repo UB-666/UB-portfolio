@@ -376,7 +376,7 @@ export default function Home() {
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">
                 <div className={`w-2 h-2 rounded-full ${isPlaying ? 'bg-green-500 animate-pulse' : 'bg-gray-500'}`}></div>
-                <span className="text-xs font-semibold text-cyan-400">Now Playing</span>
+                <span className="text-xs font-semibold text-cyan-400">My Anthem</span>
               </div>
               <button
                 onClick={() => setShowMusicPlayer(false)}
