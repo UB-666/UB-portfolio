@@ -101,10 +101,4 @@ build/
 package-lock.json
 yarn.lock
 
-# Executables
-*.exe
-acli.exe
 
-# Screenshots and test files (if not needed in production)
-screenshot*.png
-test*.png
