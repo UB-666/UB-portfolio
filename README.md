@@ -6,7 +6,7 @@
 
 A modern, responsive portfolio website built with Next.js 16, React 19, and Tailwind CSS 4. Features glassmorphism design, dark/light themes, interactive animations, and a fully functional contact form with hCaptcha protection.
 
-🔗 **Live Demo**: [https://ub-portfolio-one.vercel.app/](https://ub-portfolio-one.vercel.app/)
+🔗 **Live Demo**: [ClickMe](https://ub-portfolio-ruby.vercel.app/)
 
 ## ✨ Features
 
@@ -279,7 +279,7 @@ This project is licensed under the MIT License - feel free to use this project f
 - **Phone**: +1 (289) 623-0071
 - **Location**: Ontario, Canada
 - **GitHub**: [@UB-666](https://github.com/UB-666)
-- **Portfolio**: [https://ub-portfolio-one.vercel.app/](https://ub-portfolio-one.vercel.app/)
+- **Portfolio**: [https://ub-portfolio-one.vercel.app/](https://ub-portfolio-ruby.vercel.app/)
 
 ## 🙏 Acknowledgments
 
